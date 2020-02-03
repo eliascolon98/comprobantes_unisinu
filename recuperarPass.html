@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Comprobantes unisinú</title>
+    <link rel="stylesheet" href="css/normalize.css" />
+    <link rel="stylesheet" href="assets/fonts/fontawesome-5.7.2/css/all.min.css" />
+    <link rel="stylesheet" href="css/login-styles.css" />
+
+</head>
+
+<body>
+    <div class="login-wrapper">
+        <div class="login-info">
+            <img src="assets/img/logo.png" alt="" class="login-info__logo">
+            <h3 class="login-info__title">Plataforma - Volantes de pago</h3>
+            <small class="login-info__description">Sistema que permite la gestión de
+                los volantes de pagos para el personal docente y administrativo de la
+                Universidad del Sinú seccional cartagena.</small>
+            <div class="login-info__deco-bar"></div>
+        </div>
+        <div id="login" class="login-form">
+            <div id="forgot-pass" class="login-form__wrapper ">
+                <h3 class="login-form__title">Recuperar Contraseña</h3>
+                <small class="login-form__description">
+                    Ingresa tu nueva contraseña asociada a la plataforma para proceder con el acceso.
+                </small>
+                <form id="formCambiarPass">
+                    <div class="login-form__fields">
+                        <label class="login-form__label" for="">PIN</label>
+                        <input class="login-form__input" type="pin" placeholder="Pin para reestablecer clave" name="pin"
+                            id="pin">
+                        <label class="login-form__label" for="">Nueva contraseña</label>
+                        <input class="login-form__input" type="password" placeholder="Contraseña" name="pass">
+                        <label class="login-form__label" for="">Confirmar contraseña</label>
+                        <input class="login-form__input" type="password" placeholder="Confirmar contraseña"
+                            name="confirmarPass">
+                        <a id="to-login-sw" class="forgot-password" href="index.html">¿Iniciar sesión ahora?</a>
+                    </div>
+                    <button class="login-form__submit" id="cambiarPass" type="submit">
+                        Guardar
+                    </button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/jquery-3.4.1.min.js"></script>
+    <script src="js/mail.js"></script>
+</body>
+
+</html>

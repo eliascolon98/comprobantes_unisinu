@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Comprobantes unisinú</title>
+    <link rel="stylesheet" href="css/normalize.css" />
+    <link rel="stylesheet" href="assets/fonts/fontawesome-5.7.2/css/all.min.css" />
+    <link rel="stylesheet" href="css/login-styles.css" />
+
+</head>
+
+<body>
+    <div class="login-wrapper">
+        <div class="login-info">
+            <img src="assets/img/logo.png" alt="" class="login-info__logo">
+            <h3 class="login-info__title">Plataforma - Volantes de pago</h3>
+            <small class="login-info__description">Sistema que permite la gestión de
+                los volantes de pagos para el personal docente y administrativo de la
+                Universidad del Sinú seccional cartagena.</small>
+            <div class="login-info__deco-bar"></div>
+        </div>
+        <div id="login" class="login-form">
+            <div id="login-form-w" class="login-form__wrapper">
+                <h3 class="login-form__title">Inicio de Sesión</h3>
+                <small class="login-form__description">
+                    Ingresa a la plataforma con tu número de identificación y contrase&ntilde;a
+                </small>
+                <form action="js/validarLogin.php" method="POST">
+                    <div class="login-form__fields">
+                        <label class="login-form__label" for="">Identificación del usuario</label>
+                        <input class="login-form__input" type="text" name="user"
+                            placeholder="Escribe tu identificación">
+                        <label class="login-form__label" for="">Contrase&ntilde;a</label>
+                        <span class="login-form__input--password-eye-mask">
+                            <input id="user-pass" name="pass" class="login-form__input" type="password"
+                                placeholder="Escribe tu contraseña">
+                            <span id="eye-password-sw" class="login-form__input--password-eye">
+                                <i id="pass-eye-icon" class="fas fa-eye"></i>
+                            </span>
+                        </span>
+                        <a id="to-forgot-sw" class="forgot-password" href="#">¿Olvidaste tu contraseña?</a>
+                    </div>
+                    <button class="login-form__submit" type="submit">
+                        Iniciar
+                    </button>
+                    <button class="login-form__submit submit_two btn-register" type="button">
+                        Registrarme
+                    </button>
+                </form>
+            </div>
+            <div id="register-form-w" class="login-form__wrapper dis-n">
+                <h3 class="login-form__title">Regístrate</h3>
+                <small class="login-form__description">
+                    Ingresa tus datos ppara tener un control preciso a la hora de consultar la información
+                </small>
+                <form id="formRegistrar">
+                    <div class="login-form__fields data-user">
+                        <input class="login-form__input" type="number" name="cedula" id="cedula"
+                            placeholder="Identificación">
+                        <input id="nombre" name="nombre" class="login-form__input" type="text"
+                            placeholder="Nombre completo" onkeypress="return validar(event)">
+                        <select name="cargo" id="cargo" class="login-form__input">
+                            <option value="">Seleccionse su cargo</option>
+                            <option value="administrativo">Administrativo</option>
+                            <option value="docente">Docente</option>
+                        </select>
+                        <input class="login-form__input" type="mail" name="correo" id="correo"
+                            placeholder="Correo electrónico">
+                        <input class="login-form__input" type="text" name="telefono" id="telefono"
+                            placeholder="Telefono/Celular">
+                    </div>
+                    <button class="login-form_disabled submit_next_one" type="button">
+                        Registrar
+                    </button>
+                    <button class="login-form__submit submit_next_one" type="button">
+                        Siguiente
+                    </button>
+                    <div class="login-form__fields_registrar dis-n">
+                        <input class="login-form__input" type="text" name="user" id="user" placeholder="Usuario">
+                        <input class="login-form__input" type="password" name="pass" id="pass" placeholder="Contraseña">
+                        <input value="Registrar" class="login-form__submit registrar-user" type="button">
+                        <button class="login-form__submit submit_back" type="button">
+                            Regresar
+                        </button>
+                    </div>
+
+                </form>
+            </div>
+            <div id="forgot-pass" class="login-form__wrapper dis-n">
+                <h3 class="login-form__title">Recuperar Contraseña</h3>
+                <small class="login-form__description">
+                    Ingresa tu correo electrónico asociado con la plataforma para proceder con el proceso de
+                    recuperación de
+                    contraseña.
+                </small>
+                <form id="formRecuperarPass" method="POST" action="js/PhpMailer.php">
+                    <div class="login-form__fields">
+                        <label class="login-form__label" for="">Correo de recuperación</label>
+                        <input class="login-form__input" type="text" placeholder="Correo electrónico" id="email"
+                            name="email">
+
+                        <a id="to-login-sw" class="forgot-password" href="index.html">¿Iniciar sesión ahora?</a>
+                    </div>
+                    <button class="login-form__submit" type="submit" id="recuperarPass">
+                        Recuperar
+                    </button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/jquery-3.4.1.min.js"></script>
+    <script src="js/login.js"></script>
+    <script src="js/mail.js"></script>
+</body>
+
+</html>
